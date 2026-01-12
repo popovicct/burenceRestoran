@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="keywords" content="restoran, burgeri,pica, corbe, salate, meso, porucivanje "/>
+        <meta name="description" content="Jelovnik, lista pica i priloga, forma za porucivanje"/>
+        <meta name="og:image" content=""/>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>Burence</title>
+		<link rel="shortcut icon" href="assets/images/logo.jpeg"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+	</head>
+	<body>
+		<div id="okvir">
+			<div id="navigacija">
+				<a href="#index.html"><img src="assets/images/logo.jpeg" alt="logo"/></a>
+				<a class="zlink" href="sajt_burence.zip" download>Dokumentacija</a>
+				<div id="meni-lista"></div>
+				<i class="fa-solid fa-bars" id="hamburger"></i>
+			</div>
+			
+			<div id="ikonice-hrana">
+				<div class="icon-hrana">
+					<i class="fa-solid fa-burger"></i>
+					<p>HRANA ZA PONETI</p>
+				</div>
+				<div class="icon-hrana">
+					<i class="fa-solid fa-building"></i>
+					<p>OBROK U RESTORANU</p>
+				</div>
+			</div>
+			
+			<div id="rest-dost"></div>
+			<div id="jelovnikFilter">
+				<h1>Jelovnik</h1>
+				<div id="filteri">
+					<button type="button" class="dugme" value="burger">Burgeri</button>
+					<button type="button" class="dugme" value="pica">Pica</button>
+					<button type="button" class="dugme" value="meso">Meso</button>
+					<button type="button" class="dugme" value="salate">Salate</button>
+					<button type="button" class="dugme" value="corbe">Čorbe</button>
+				</div>
+				<div id="jelovnik"></div>
+				<a href="#filteri" class="zlink" id="vratiGore">Vrati na vrh jelovnika</a>
+			</div>
+			<div id="picePrilozi">
+				<div class="naslov">
+					<h2>Karta pića</h2>
+					<div id="pice" class="kartaPP"></div>
+				</div>
+				<div class="naslov">
+					<h2>Prilozi</h2>
+					<div id="prilozi" class="kartaPP"></div>
+					
+				</div>
+				
+			</div>
+				<div id="poruciNaslov"><h2>Poručite</h2></div>
+				<form id="poruci">
+					
+					<div id="odabir-hrana">
+						<div class="odabir">
+							<button type="button" id="dugmeBurger" class="dugme-stil">Izaberite burger:</button>
+							<div id="listaBurger" class="liste-stil"></div>
+						</div>
+						<div class="odabir">
+							<button type="button" id="dugmePica" class="dugme-stil">Izaberite picu:</button>
+							<div id="listaPica" class="liste-stil"></div>
+						</div>
+						<div class="odabir">
+							<button type="button" id="dugmeMeso" class="dugme-stil">Izaberite meso:</button>
+							<div id="listaMeso" class="liste-stil"></div>
+						</div>
+						<div class="odabir">
+							<button type="button" id="dugmeSalate" class="dugme-stil">Izaberite salatu:</button>
+							<div id="listaSalate" class="liste-stil"></div>
+						</div>
+						<div class="odabir">
+							<button type="button" id="dugmeCorbe" class="dugme-stil">Izaberite čorbu:</button>
+							<div id="listaCorbe" class="liste-stil"></div>
+						</div>
+
+					</div>
+					
+					<div id="forma-polja">
+						<div class="polje">
+							<label for="ip">Ime i prezime</label>
+							<input type="text" id="ip" name="imePrezime" placeholder="Petar Petrović" required/>
+							<span id="porukaGreska1"></span>
+						</div>
+						
+						<div class="polje">
+							<label for="adresa">Adresa</label>
+							<input type="text" id="adresa" name="adresa" placeholder="Zdravka Čelara 16" required/>
+							<span id="porukaGreska2"></span>
+						</div>
+						
+						<div class="polje">
+							<label for="telefon">Broj telefona</label>
+							<input type="text" id="telefon" name="telefon" placeholder="381 61 9876543" required/>
+							<span id="porukaGreska3"></span>
+						</div>
+						
+						<div class="polje2">
+							<div class="polje3">
+								<label for="dostava">Dostava na adresu</label>
+								<input type="radio" id="dostava" name="preuzimanja" checked="checked" value="dostava"/>
+							</div>
+							<div class="polje3">
+								<label for="licno">Lično preuzimanje</label>
+								<input type="radio" id="licno" name="preuzimanja" value="licno"/>
+						</div>
+						</div>
+						
+						<div class="polje3">
+							<input type="checkbox" id="cb" required="required" name="cb"/>
+							<label for="cb">Plaćanje se vrši pri preuzimanju. Plaćanje gotovinom ili karticom.</label>
+						</div>
+					
+					<div>
+						<input type="button" id="sub-btn" name="sub-btn" value="Pošalji"/>
+					</div>	
+</div>					
+				</form>
+	
+			<footer>
+				<div id="gore">
+					<div id="levo">
+						<img src="assets/images/logo.jpeg" alt="logo"/>
+						<div id="radnoVreme">
+							<p>Ponedeljak-nedelja</p>
+							<p>09:00-23:00</p>
+						</div>
+					</div>
+					<div id="footer-lista"></div>
+					<div id="desno">
+						<div id="info"></div>
+						<div id="dr-mreze"></div>
+					</div>
+					
+				</div>
+				<div id="dole">
+					<p>&copy 2026 ALL RIGHTS RESERVED</p>
+					<p>DEVELOPED BY TIJANA POPOVIĆ<p></div>
+			</footer>
+		</div>
+		
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
